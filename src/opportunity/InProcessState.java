@@ -1,18 +1,18 @@
 package opportunity;
 
-public class ToStartState implements OpportunityState {
+public class InProcessState implements OpportunityState {
     @Override
     public void prev(Opportunity opportunity) {
-
+        opportunity.setState(new ToStartState());
     }
 
     @Override
     public void next(Opportunity opportunity) {
-        opportunity.setState(new InProcessState());
+        opportunity.setState(new ValidatedState());
     }
 
     @Override
     public void printStatus() {
-        System.out.println("Da avviare");
+        System.out.println("In lavorazione");
     }
 }

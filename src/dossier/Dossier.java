@@ -15,7 +15,7 @@ public class Dossier {
         state.unassign(this);
     }
 
-    public void next() {
+    public void nextState() {
         state.next(this);
     }
 

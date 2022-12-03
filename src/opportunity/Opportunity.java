@@ -12,7 +12,19 @@ public class Opportunity {
         this.state = state;
     }
 
+    public void previousState() {
+        state.prev(this);
+    }
+
+    public void nextState() {
+        state.next(this);
+    }
+
     public void close() {
         state.close(this);
+    }
+
+    public void printStatus() {
+        state.printStatus();
     }
 }
